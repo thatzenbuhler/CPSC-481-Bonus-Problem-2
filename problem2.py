@@ -1,5 +1,8 @@
 # CPSC 481 Bonus Assignment Problem 2
 # Perceptron Learning Algorithm example
+# Tyler Hatzenbuhler
+# Anette Ulrichsen
+# Team THAU
 
 # Given dataset for problem: x1, x2, output t
 dataset = [ [1.0, 1.0, 1],
