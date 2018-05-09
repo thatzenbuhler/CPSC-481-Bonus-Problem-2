@@ -25,6 +25,19 @@ def predict(row, weights):
        net += weights[i] * row[i]
     return 1.0 if net >= 0.0 else -1.0
 
-for row in dataset:
-    prediction = predict(row, weights)
-    print("Expected = %d, Predicted = %d" % (row[-1], prediction))
+finished = False
+learnrate = 0.5
+epoch = 0
+
+while finished == False:
+    print("Epoch %d\n" % (++epoch))
+    finished = True # Switches to false if a change occurs
+    for index, row in enumerate(dataset):
+        prediction = predict(row, weights)
+        if prediction == row[-1]:
+            continue
+        else:
+            deltaWeight = learnrate * (row[-1] - prediction)
+            print("Row %d doesn't match, Weight adjusted by %f" % (index, deltaWeight))
+
+
