@@ -53,3 +53,4 @@ while finished == False:
 print("\nTraining complete! It took %d epochs." % (epoch - 1))
 print("Final weight vector: ", weights)
 
+input()
